@@ -1,0 +1,321 @@
+{
+  "version": 3,
+  "units": "mm. cortex-*.glb and \"fissure\"/\"retractDir\": sim frame (src/config/anatomy.ts); preview-hemisphere.glb and \"anatomy\": RAS (x = patient right, y = anterior, z = superior)",
+  "source": "Brain by dgallichan (Sketchfab), via NIH 3D 3DPX-021161, CC BY 4.0",
+  "fissure": {
+    "lateral": [
+      -0.0,
+      0.0,
+      47.71
+    ],
+    "medial": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "lip": [
+      [
+        4.43,
+        0.1,
+        46.7
+      ],
+      [
+        0.0,
+        -0.0,
+        47.71
+      ],
+      [
+        -4.78,
+        -1.9,
+        49.23
+      ],
+      [
+        -7.68,
+        -3.8,
+        49.64
+      ],
+      [
+        -12.69,
+        -4.73,
+        51.27
+      ],
+      [
+        -15.93,
+        -5.96,
+        51.2
+      ],
+      [
+        -22.46,
+        -6.82,
+        52.54
+      ],
+      [
+        -24.56,
+        -6.35,
+        53.26
+      ],
+      [
+        -48.77,
+        -23.03,
+        47.28
+      ]
+    ]
+  },
+  "retractDir": {
+    "frontal": [
+      -0.388,
+      0.922,
+      0.0
+    ],
+    "temporal": [
+      0.388,
+      -0.922,
+      0.0
+    ]
+  },
+  "tiers": {
+    "low": {
+      "file": "cortex-low.glb",
+      "bytes": 1164820,
+      "triangles": 44051,
+      "pieces": {
+        "frontal": 24000,
+        "temporal": 20051
+      }
+    },
+    "high": {
+      "file": "cortex-high.glb",
+      "bytes": 1552480,
+      "triangles": 58667,
+      "pieces": {
+        "frontal": 38616,
+        "temporal": 20051
+      }
+    }
+  },
+  "check": {
+    "frontalAbove": true,
+    "screenDirections": {
+      "lateral (patient right)": [
+        0.1,
+        -0.41,
+        0.91
+      ],
+      "anterior": [
+        0.97,
+        0.23,
+        -0.0
+      ],
+      "superior": [
+        -0.21,
+        0.88,
+        0.43
+      ]
+    },
+    "rasToSim": {
+      "R": [
+        [
+          0.09869,
+          0.97314,
+          -0.20801
+        ],
+        [
+          -0.41374,
+          0.23023,
+          0.8808
+        ],
+        [
+          0.90503,
+          -0.00087,
+          0.42534
+        ]
+      ],
+      "t": [
+        -0.272,
+        -4.602,
+        -17.943
+      ]
+    },
+    "simArachnoid": {
+      "lateral": [
+        30.0,
+        22.0,
+        12.0
+      ],
+      "medial": [
+        -6.0,
+        -3.0,
+        6.0
+      ]
+    },
+    "hemisphereBounds": [
+      [
+        -1.0,
+        -107.7,
+        -18.2
+      ],
+      [
+        67.4,
+        74.3,
+        93.5
+      ]
+    ],
+    "fissureLengthMm": 47.7,
+    "microscopeAxisRas": [
+      0.905,
+      -0.001,
+      0.425
+    ]
+  },
+  "anatomy": {
+    "fissure": {
+      "lateral": [
+        57.54,
+        1.27,
+        31.92
+      ],
+      "medial": [
+        14.36,
+        1.31,
+        11.63
+      ],
+      "points": [
+        [
+          57.02,
+          5.6,
+          30.66
+        ],
+        [
+          57.54,
+          1.27,
+          31.92
+        ],
+        [
+          59.24,
+          -3.82,
+          31.89
+        ],
+        [
+          60.1,
+          -7.08,
+          31.0
+        ],
+        [
+          61.46,
+          -12.17,
+          31.9
+        ],
+        [
+          61.59,
+          -15.61,
+          31.47
+        ],
+        [
+          62.52,
+          -22.17,
+          32.65
+        ],
+        [
+          62.77,
+          -24.1,
+          33.8
+        ],
+        [
+          61.87,
+          -51.5,
+          21.6
+        ]
+      ]
+    },
+    "seeds": {
+      "temporal pole": [
+        37.2,
+        14.6,
+        -7.4
+      ],
+      "middle temporal gyrus": [
+        61.3,
+        -22.4,
+        10.6
+      ],
+      "inferior temporal gyrus": [
+        53.3,
+        -32.6,
+        -3.8
+      ],
+      "fusiform gyrus": [
+        33.2,
+        -40.9,
+        -0.2
+      ],
+      "parahippocampal gyrus": [
+        21.1,
+        -22.4,
+        -0.2
+      ],
+      "uncus": [
+        21.1,
+        2.3,
+        -7.4
+      ],
+      "middle frontal gyrus": [
+        37.2,
+        39.3,
+        50.2
+      ],
+      "frontal pole": [
+        23.1,
+        64.0,
+        25.0
+      ],
+      "precentral gyrus (dorsal)": [
+        37.2,
+        -15.2,
+        73.6
+      ],
+      "supramarginal gyrus": [
+        53.3,
+        -42.9,
+        53.8
+      ],
+      "superior parietal lobule": [
+        27.2,
+        -59.4,
+        73.6
+      ]
+    },
+    "temporalSeeds": [
+      "temporal pole",
+      "middle temporal gyrus",
+      "inferior temporal gyrus",
+      "fusiform gyrus",
+      "parahippocampal gyrus",
+      "uncus"
+    ],
+    "preview": {
+      "file": "preview-hemisphere.glb",
+      "bytes": 3136540,
+      "triangles": 119997,
+      "pieces": {
+        "frontal": 94631,
+        "temporal": 16355,
+        "insula": 9011
+      }
+    }
+  },
+  "params": {
+    "axes": "auto",
+    "units": "mm",
+    "hemisphere": "right",
+    "seed_shift": "0,0,0",
+    "sigma": 3.0,
+    "anchor": "0.0,0.0,0.0",
+    "tilt": 0.0,
+    "radius": 55.0,
+    "max_depth": 60.0,
+    "low": 24000,
+    "high": 90000,
+    "preview": 120000,
+    "smooth": 2
+  }
+}

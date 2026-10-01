@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>IC-PC Clipping Sim Showcase</title>
+<link rel="icon" href="data:,">
+<meta name="description" content="What the IC-PC aneurysm clipping simulator can do, with a link to try each feature. Education and demonstration only.">
+<style>
+  :root {
+    color-scheme: dark;
+    --bg: #050302; --panel: #0c0e10; --border: rgba(160, 190, 200, 0.22);
+    --text: #d8dde0; --muted: #8a949a; --accent: #5fd3c6; --warn: #f2b84b;
+    --mono: 'JetBrains Mono', 'Cascadia Mono', Consolas, 'SFMono-Regular', monospace;
+    --sans: 'Inter', 'Segoe UI', system-ui, sans-serif;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--text); font: 15px/1.55 var(--sans); }
+  main { max-width: 820px; margin: 0 auto; padding: 28px 16px 56px; }
+  .kicker { font: 600 11px/1 var(--mono); letter-spacing: 0.12em; color: var(--accent); }
+  h1 { font-size: 26px; margin: 8px 0 6px; text-wrap: balance; }
+  .sub { color: var(--muted); margin: 0 0 18px; }
+  .disclaimer { border-left: 2px solid var(--warn); background: rgba(242, 184, 75, 0.06); padding: 10px 14px; margin: 0 0 24px; color: var(--text); }
+  h2 { font: 600 11px/1 var(--mono); letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); margin: 28px 0 10px; }
+  ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
+  li { background: var(--panel); border: 1px solid var(--border); border-radius: 6px; padding: 12px 14px; display: grid; gap: 4px; }
+  .row { display: flex; flex-wrap: wrap; gap: 6px 12px; align-items: baseline; justify-content: space-between; }
+  .name { font-weight: 600; }
+  a.try { font: 500 13px/1 var(--mono); color: var(--accent); text-decoration: none; border: 1px solid var(--border); border-radius: 4px; padding: 6px 8px; }
+  a.try:hover, a.try:focus-visible { border-color: var(--accent); outline: none; }
+  .desc { color: var(--muted); }
+  .tag { font: 600 10px/1 var(--mono); letter-spacing: 0.08em; color: var(--warn); border: 1px solid rgba(242, 184, 75, 0.4); border-radius: 3px; padding: 3px 5px; margin-left: 6px; vertical-align: 2px; }
+  footer { margin-top: 32px; color: var(--muted); font-size: 13px; }
+  footer a { color: var(--accent); }
+</style>
+</head>
+<body>
+<main>
+  <div class="kicker">MICROSURGERY SIMULATOR</div>
+  <h1>What this simulator can do</h1>
+  <p class="sub">Clipping of a right IC-PC (internal carotid–posterior communicating artery) aneurysm through a pterional, transsylvian approach, in the browser. Each item links straight to it.</p>
+  <p class="disclaimer"><strong>For education and demonstration only.</strong> This is a simplified model. It is not a clinical training tool, it is not validated for skill assessment, and nothing in it is medical advice.</p>
+
+  <h2>The case</h2>
+  <ul>
+    <li><div class="row"><span class="name">The full operation</span><a class="try" href="./">Open the sim</a></div>
+      <span class="desc">Six stages: open the sylvian fissure, identify M1, the ICA and optic nerve, confirm the PCom, dissect the neck, clip, and check the PCom stays open. A checklist and a mentor guide each step; press ? for controls.</span></li>
+    <li><div class="row"><span class="name">Original version (M6, before the real brain)</span><a class="try" href="./original/">./original/</a></div>
+      <span class="desc">The simulator frozen as of September 28: the complete case with the simple procedural lobes and the first microscope view, before any work on the real brain model. (Only the Hide panels button was added later.)</span></li>
+    <li><div class="row"><span class="name">Demo mode</span><a class="try" href="./">Open, then ▶ DEMO</a></div>
+      <span class="desc">The sim plays the case for you with the same tools you use. It keeps playing while you touch the screen; press ■ STOP DEMO to take over.</span></li>
+    <li><div class="row"><span class="name">Debrief</span><a class="try" href="./">Open, then END CASE</a></div>
+      <span class="desc">Clip result (closure, residual neck, ICA narrowing, branch occlusion), time, blood loss and tips.</span></li>
+  </ul>
+
+  <h2>Surgical tools and checks</h2>
+  <ul>
+    <li><div class="row"><span class="name">Ten instruments</span><a class="try" href="./">Keys 1–0</a></div>
+      <span class="desc">Suction, micro scissors, bipolar, dissector, brain retractor, aneurysm clip (straight or curved), ICG, micro Doppler, endoscope, temporary clip.</span></li>
+    <li><div class="row"><span class="name">Bleeding and vital signs</span><a class="try" href="./">Open the sim</a></div>
+      <span class="desc">Oozing and rupture, blood pooling, suction, a live ECG and arterial pressure trace, and motor evoked potentials that react to blood flow.</span></li>
+    <li><div class="row"><span class="name">Checking the clip</span><a class="try" href="./">Keys 7, 8, 9</a></div>
+      <span class="desc">ICG video angiography, micro Doppler sound, and an endoscope view behind the neck show whether the aneurysm is closed and the PCom still fills.</span></li>
+  </ul>
+
+  <h2>Anatomy and look</h2>
+  <ul>
+    <li><div class="row"><span class="name">Real brain model</span><a class="try" href="./">Default</a></div>
+      <span class="desc">An MRI-based right hemisphere, split into frontal and temporal lobes along the sylvian fissure, with pink pial surface vessels drawn in the shader.</span></li>
+    <li><div class="row"><span class="name">Today's sim with the simple lobes</span><a class="try" href="./?cortex=procedural">?cortex=procedural</a></div>
+      <span class="desc">The current version with everything added since, but the procedural lobes in place of the real brain. (For the untouched September 28 version, see Original version above.)</span></li>
+    <li><div class="row"><span class="name">Anatomy at real depth<span class="tag">PREVIEW</span></span><a class="try" href="./?view=m3">?view=m3</a></div>
+      <span class="desc">Work in progress: the surgeon's view from right pterional operative videos (frontal lobe left, temporal lobe right), the carotid cistern about 45 mm below the fissure opening, and the vessels and nerves at real sizes and spacing, placed in the opening the retracted lobes leave. The demo (&#9654; DEMO) plays the whole case here.</span></li>
+    <li><div class="row"><span class="name">M3 turned to the video orientation<span class="tag">PREVIEW</span></span><a class="try" href="./?view=m3&amp;roll=201">?view=m3&amp;roll=201</a></div>
+      <span class="desc">The same preview turned so the frontal lobe is on the left, the temporal lobe on the right and the fissure vertical, as in the right pterional reference videos. Compare with the default 70&deg; roll; <code>?roll=</code> takes any angle.</span></li>
+    <li><div class="row"><span class="name">Rigid retraction (before soft)</span><a class="try" href="./?soft=0">?soft=0</a></div>
+      <span class="desc">Soft retraction is now the default: the lobes bend under the retractor blade (cut the sylvian arachnoid with the scissors (2), then use the retractor (5)). This switches back to the old version, where each lobe slides as one block.</span></li>
+    <li><div class="row"><span class="name">Tissue look panel</span><a class="try" href="./?tweak=1">?tweak=1</a></div>
+      <span class="desc">Live sliders and colour pickers for every tissue and for the surface vessels; copy the values as config.</span></li>
+  </ul>
+
+  <h2>Devices</h2>
+  <ul>
+    <li><div class="row"><span class="name">Quality tiers</span><span><a class="try" href="./?quality=low">?quality=low</a> <a class="try" href="./?quality=high">?quality=high</a></span></div>
+      <span class="desc">Picked automatically for your device and adjusted to hold the frame rate; LOW runs on integrated graphics and phones. Also in the top bar.</span></li>
+    <li><div class="row"><span class="name">Touch layout</span><a class="try" href="./?touch=1">?touch=1</a></div>
+      <span class="desc">Phones and tablets: pinch to zoom, two fingers to pan, a View / Tool switch for one finger, and <b>Hide panels</b> (top left, or H on a keyboard) to fold every panel away and see the anatomy. Forced on a desktop with this link.</span></li>
+  </ul>
+
+  <h2>How it's built</h2>
+  <ul>
+    <li><div class="row"><span class="name">Architecture map</span><a class="try" href="./architecture.html">./architecture.html</a></div>
+      <span class="desc">An interactive map of the simulator's parts: instruments, anatomy, blood flow, bleeding and vitals, the event bus, the procedure stages, and how the site is built and published. Generated with Archify and checked against the source code (as of Oct 1).</span></li>
+  </ul>
+
+  <footer>Brain model: "Brain" by dgallichan (Sketchfab), via NIH 3D (3DPX-021161), CC BY 4.0. Surgical orientation checked against Barrow Neurological Institute operative videos. <a href="./">Back to the simulator</a></footer>
+</main>
+</body>
+</html>
